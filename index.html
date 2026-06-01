@@ -23,8 +23,8 @@
       --border:rgba(255,255,255,0.12);
       --shadow:rgba(0,0,0,0.28);
     }
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+    body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;max-width:100%;-webkit-font-smoothing:antialiased}
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-track{background:#150407}
     ::-webkit-scrollbar-thumb{background:var(--burg);border-radius:2px}
@@ -32,7 +32,7 @@
     @keyframes floatX{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
     @keyframes fadeInUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
     /* ── FONDO ANIMADO — WebGL canvas ── */
-    #bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}
+    #bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none;width:100%!important;height:100%!important}
     @keyframes heroAura{0%{transform:translate(0,0) scale(1)}35%{transform:translate(90px,-55px) scale(1.2)}70%{transform:translate(-55px,65px) scale(.88)}100%{transform:translate(0,0) scale(1)}}
 
     /* ── NAV ── */
@@ -188,7 +188,7 @@
     .ba-slider{position:relative;height:280px;cursor:ew-resize;user-select:none;overflow:hidden}
     .ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .ba-before-wrap{position:absolute;inset:0;overflow:hidden;width:50%}
-    .ba-before-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+    .ba-before-wrap img{position:absolute;top:0;left:0;width:200%;height:100%;object-fit:cover;max-width:none}
     /* placeholder dental */
     .ba-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
     .ba-ph svg{width:64px;height:64px;opacity:.55}
